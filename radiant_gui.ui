@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>934</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="open_folder">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open Folder</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="next_image">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Next Image</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="prev_img">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Previous Image</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_annotations">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save Annotations</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="image">
+    <property name="geometry">
+     <rect>
+      <x>206</x>
+      <y>44</y>
+      <width>471</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>                                                             image </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="select_model">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>30</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans CJK SC DemiLight</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>  Select Model</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="model_selector">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>90</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Model1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Model2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Model3</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="th_label">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>180</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Detection Threshold</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="th_show">
+    <property name="geometry">
+     <rect>
+      <x>806</x>
+      <y>220</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> show</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="th_slider">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>280</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_filter">
+    <property name="geometry">
+     <rect>
+      <x>766</x>
+      <y>340</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>          Label Filter</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="label_selector">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>390</y>
+      <width>131</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>label_1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>label_2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>label_3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>label_4</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>label_5</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="Detect">
+    <property name="geometry">
+     <rect>
+      <x>769</x>
+      <y>430</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Detect</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>934</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
