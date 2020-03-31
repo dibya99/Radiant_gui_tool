@@ -115,14 +115,52 @@ class object_detector:
             #print(output_dict)
             # Visualization of the results of a detection.
 
-            boxes = np.squeeze(output_dict['detection_boxes'])
+            boxes =np.squeeze(output_dict['detection_boxes'])
             scores = np.squeeze(output_dict['detection_scores'])
-            classes = np.squeeze(output_dict['detection_classes'])
+            classes =np.squeeze(output_dict['detection_classes'])
 
-            indices = np.argwhere(classes == self.class_selector)
+            print(type(boxes))
+            print(type(scores))
+            print(type(classes))
+
+
+            if (boxes.size == 1 or scores.size==1 or classes.size == 1):
+                print('Hi')
+                boxes=np.asarray([boxes])
+                scores=np.asarray([scores])
+                classes=np.asarray([classes])
+
+            print(scores[0])
+
+            print(boxes)
+            print(scores)
+            print(classes)
+
+            print(type(boxes))
+            print(type(scores))
+            print(type(classes))
+
+
+            indices = np.argwhere(classes ==  self.class_selector)
             boxes = np.squeeze(boxes[indices])
             scores = np.squeeze(scores[indices])
             classes = np.squeeze(classes[indices])
+
+            if (boxes.size == 1 or scores.size==1 or classes.size == 1):
+                print('Hi')
+                boxes=np.asarray([boxes])
+                scores=np.asarray([scores])
+                classes=np.asarray([classes])
+
+            print(boxes)
+            print(scores)
+            print(classes)
+
+
+
+            #print(indices)
+
+
 
             vis_util.visualize_boxes_and_labels_on_image_array(
                     image_np,
@@ -132,6 +170,7 @@ class object_detector:
                     self.category_index,min_score_thresh=self.threshold_factor,
                     instance_masks=output_dict.get('detection_masks_reframed', None),
                     use_normalized_coordinates=True,
+                    max_boxes_to_draw=4,
                     line_thickness=8)
             #print(image_np)
             #img_cv = cv2.resize(image_np,(200,200))
@@ -140,9 +179,12 @@ class object_detector:
             #output=Image.fromarray(image_np)
             return image_np
             #output.show()
-        except IndexError:
-            print("Try with a new threshold")
-            return image_np 
+
+        except Exception as e:
+             exc_type, exc_obj, exc_tb = sys.exc_info()
+             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+             print(exc_type, fname, exc_tb.tb_lineno)
+             return image_np
 
 if __name__ == "__main__":
     obj=object_detector()

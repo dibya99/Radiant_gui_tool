@@ -147,7 +147,8 @@ class Ui_MainWindow(object):
         self.prev_img.setText(_translate("MainWindow", "Previous Image"))
         self.save_annotations.setText(_translate("MainWindow", "Save Annotations"))
 
-        self.image.setText(_translate("MainWindow", "                                                             image "))
+        #self.image.setText(_translate("MainWindow", "                                                             image "))
+        self.show_image("/home/dibya/GUI_tool_Radiant/scripts/utils/no_image.png")
         #self.show_image("~/frame_18.png")
 
         self.select_model.setText(_translate("MainWindow", "  Select Model"))
